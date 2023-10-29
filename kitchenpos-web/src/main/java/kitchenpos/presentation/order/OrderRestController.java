@@ -1,11 +1,16 @@
-package main.java.kitchenpos.presentation.order;
+package kitchenpos.presentation.order;
 
-import kitchenpos.order.application.OrderService;
-import kitchenpos.order.domain.Order;
-import main.java.kitchenpos.presentation.order.dto.OrderRequest;
-import main.java.kitchenpos.presentation.order.dto.UpdateOrderStateRequest;
+import kitchenpos.application.order.OrderService;
+import kitchenpos.domain.order.Order;
+import kitchenpos.presentation.order.dto.OrderRequest;
+import kitchenpos.presentation.order.dto.UpdateOrderStateRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 import java.util.List;

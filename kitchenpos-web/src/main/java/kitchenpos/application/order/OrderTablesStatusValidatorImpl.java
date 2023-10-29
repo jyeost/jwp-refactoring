@@ -1,16 +1,14 @@
-package main.java.kitchenpos.application.order;
+package kitchenpos.application.order;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.order.OrderRepository;
-import kitchenpos.order.domain.OrderStatus;
-import kitchenpos.table.application.OrderTableStatusValidator;
-import kitchenpos.tablegroup.application.OrderTablesStatusValidator;
+import kitchenpos.application.table.OrderTableStatusValidator;
+import kitchenpos.application.tablegroup.OrderTablesStatusValidator;
+import kitchenpos.domain.order.OrderRepository;
+import kitchenpos.domain.order.OrderStatus;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static kitchenpos.global.exception.ExceptionInformation.ORDER_TABLE_STATUS_IS_NOT_COMPLETE;
-import static kitchenpos.global.exception.ExceptionInformation.UNGROUP_NOT_COMPLETED_ORDER_TABLE;
 
 @Service
 public class OrderTablesStatusValidatorImpl implements OrderTableStatusValidator, OrderTablesStatusValidator {

@@ -1,7 +1,7 @@
 package kitchenpos.domain.menugroup;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menugroup.domain.Name;
+
+import kitchenpos.exception.KitchenposException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -9,9 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static kitchenpos.global.exception.ExceptionInformation.*;
+import static kitchenpos.exception.ExceptionInformation.MENU_GROUP_NAME_IS_NULL;
+import static kitchenpos.exception.ExceptionInformation.MENU_GROUP_NAME_LENGTH_OUT_OF_BOUNCE;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @SuppressWarnings("NonAsciiCharacters")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

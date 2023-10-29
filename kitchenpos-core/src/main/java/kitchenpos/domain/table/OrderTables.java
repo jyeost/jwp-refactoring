@@ -1,15 +1,14 @@
-package main.java.kitchenpos.domain.table;
+package kitchenpos.domain.table;
 
-import kitchenpos.global.exception.KitchenposException;
+
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 
 import javax.persistence.Embeddable;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static kitchenpos.global.exception.ExceptionInformation.TABLE_GROUP_NOT_EMPTY_OR_ALREADY_GROUPED;
-import static kitchenpos.global.exception.ExceptionInformation.TABLE_GROUP_UNDER_BOUNCE;
 
 @Embeddable
 public class OrderTables {

@@ -1,4 +1,4 @@
-package main.java.kitchenpos.exception;
+package kitchenpos.exception;
 
 public enum ExceptionInformation {
     // 100 번대 도메인 관련 오류

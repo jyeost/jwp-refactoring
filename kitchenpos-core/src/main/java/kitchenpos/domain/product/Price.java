@@ -1,14 +1,14 @@
-package main.java.kitchenpos.domain.product;
+package kitchenpos.domain.product;
 
-import kitchenpos.global.exception.KitchenposException;
+
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_PRICE_IS_NULL;
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_PRICE_LENGTH_OUT_OF_BOUNCE;
 
 @Embeddable
 public class Price {
@@ -19,7 +19,7 @@ public class Price {
     @Column(nullable = false, columnDefinition = "decimal", precision = 19, scale = 2)
     private BigDecimal price;
 
-    protected Price(){
+    protected Price() {
     }
 
     public Price(final BigDecimal price) {
@@ -34,7 +34,7 @@ public class Price {
     }
 
     private static void validateNotNull(final BigDecimal price) {
-        if(Objects.isNull(price)){
+        if (Objects.isNull(price)) {
             throw new KitchenposException(ExceptionInformation.PRODUCT_PRICE_IS_NULL);
         }
     }

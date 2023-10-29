@@ -1,10 +1,10 @@
-package main.java.kitchenpos.domain.table;
+package kitchenpos.domain.table;
 
-import kitchenpos.global.exception.KitchenposException;
+
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 
 import javax.persistence.Embeddable;
-
-import static kitchenpos.global.exception.ExceptionInformation.ORDER_TABLE_GUEST_OUT_OF_BOUNCE;
 
 @Embeddable
 public class Guest {

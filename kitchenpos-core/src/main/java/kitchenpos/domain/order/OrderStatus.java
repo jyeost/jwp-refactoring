@@ -1,4 +1,4 @@
-package main.java.kitchenpos.domain.order;
+package kitchenpos.domain.order;
 
 import java.util.Arrays;
 import java.util.List;

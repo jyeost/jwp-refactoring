@@ -1,4 +1,4 @@
-package main.java.kitchenpos.presentation.menu.dto;
+package kitchenpos.presentation.menu.dto;
 
 import java.math.BigDecimal;
 import java.util.List;

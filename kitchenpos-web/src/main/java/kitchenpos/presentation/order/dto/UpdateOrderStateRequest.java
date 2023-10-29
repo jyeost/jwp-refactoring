@@ -1,4 +1,4 @@
-package main.java.kitchenpos.presentation.order.dto;
+package kitchenpos.presentation.order.dto;
 
 public class UpdateOrderStateRequest {
 

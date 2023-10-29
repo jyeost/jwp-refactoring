@@ -1,7 +1,7 @@
-package main.java.kitchenpos.domain.menu;
+package kitchenpos.domain.menu;
 
-import kitchenpos.global.exception.ExceptionInformation;
-import kitchenpos.global.exception.KitchenposException;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -15,7 +15,7 @@ public class Name {
     @Column(nullable = false)
     private String name;
 
-    protected Name(){
+    protected Name() {
     }
 
     public Name(final String name) {
@@ -30,7 +30,7 @@ public class Name {
     }
 
     private static void validateNotNull(final String name) {
-        if(Objects.isNull(name)){
+        if (Objects.isNull(name)) {
             throw new KitchenposException(ExceptionInformation.MENU_NAME_IS_NULL);
         }
     }

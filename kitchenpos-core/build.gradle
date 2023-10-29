@@ -1,5 +1,3 @@
-project(':kitchenpos-core') {
-    dependencies {
-        implementation project(':kitchenpos-common')
-    }
+dependencies {
+    implementation(project(':kitchenpos-common'))
 }

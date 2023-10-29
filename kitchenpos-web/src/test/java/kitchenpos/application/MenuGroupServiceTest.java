@@ -1,11 +1,14 @@
 package kitchenpos.application;
 
 
+import kitchenpos.application.menugroup.MenuGroupService;
+import kitchenpos.domain.menugroup.MenuGroup;
+import kitchenpos.presentation.menugroup.dto.MenuGroupRequest;
 import kitchenpos.support.ServiceTest;
-import main.java.kitchenpos.presentation.menugroup.dto.MenuGroupRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 

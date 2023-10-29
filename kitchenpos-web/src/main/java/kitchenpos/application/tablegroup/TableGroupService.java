@@ -1,18 +1,19 @@
-package main.java.kitchenpos.application.tablegroup;
+package kitchenpos.application.tablegroup;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.table.OrderTableRepository;
-import kitchenpos.table.domain.OrderTable;
-import kitchenpos.tablegroup.TableGroupRepository;
-import kitchenpos.tablegroup.domain.TableGroup;
-import main.java.kitchenpos.presentation.tablegroup.dto.CreateTableGroupRequest;
+
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.domain.table.OrderTableRepository;
+import kitchenpos.domain.tablegroup.TableGroup;
+import kitchenpos.domain.tablegroup.TableGroupRepository;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.tablegroup.dto.CreateTableGroupRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-import static kitchenpos.global.exception.ExceptionInformation.*;
 
 @Service
 public class TableGroupService {

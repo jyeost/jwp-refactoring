@@ -1,10 +1,10 @@
 package kitchenpos.application;
 
-import kitchenpos.product.domain.Product;
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.product.application.ProductService;
+import kitchenpos.application.product.ProductService;
+import kitchenpos.domain.product.Product;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.product.dto.ProductRequest;
 import kitchenpos.support.ServiceTest;
-import main.java.kitchenpos.presentation.product.dto.ProductRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -13,10 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_PRICE_IS_NULL;
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_PRICE_LENGTH_OUT_OF_BOUNCE;
+import static kitchenpos.exception.ExceptionInformation.PRODUCT_PRICE_IS_NULL;
+import static kitchenpos.exception.ExceptionInformation.PRODUCT_PRICE_LENGTH_OUT_OF_BOUNCE;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 @DisplayName("상품 서비스 테스트")

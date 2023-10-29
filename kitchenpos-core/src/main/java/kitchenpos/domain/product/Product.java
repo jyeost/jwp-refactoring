@@ -1,4 +1,4 @@
-package main.java.kitchenpos.domain.product;
+package kitchenpos.domain.product;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

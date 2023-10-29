@@ -1,17 +1,18 @@
 package kitchenpos.support;
 
-import kitchenpos.menu.domain.Menu;
-import main.java.kitchenpos.presentation.menu.dto.MenuProductRequest;
-import main.java.kitchenpos.presentation.menu.dto.MenuRequest;
-import kitchenpos.menugroup.domain.MenuGroup;
-import main.java.kitchenpos.presentation.menugroup.dto.MenuGroupRequest;
-import main.java.kitchenpos.presentation.order.dto.OrderLineItemRequest;
-import main.java.kitchenpos.presentation.order.dto.OrderRequest;
-import kitchenpos.product.domain.Product;
-import main.java.kitchenpos.presentation.product.dto.ProductRequest;
-import kitchenpos.table.domain.OrderTable;
-import main.java.kitchenpos.presentation.table.dto.CreateOrderTableRequest;
-import main.java.kitchenpos.presentation.tablegroup.dto.CreateTableGroupRequest;
+
+import kitchenpos.domain.menu.Menu;
+import kitchenpos.domain.menugroup.MenuGroup;
+import kitchenpos.domain.product.Product;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.presentation.menu.dto.MenuProductRequest;
+import kitchenpos.presentation.menu.dto.MenuRequest;
+import kitchenpos.presentation.menugroup.dto.MenuGroupRequest;
+import kitchenpos.presentation.order.dto.OrderLineItemRequest;
+import kitchenpos.presentation.order.dto.OrderRequest;
+import kitchenpos.presentation.product.dto.ProductRequest;
+import kitchenpos.presentation.table.dto.CreateOrderTableRequest;
+import kitchenpos.presentation.tablegroup.dto.CreateTableGroupRequest;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

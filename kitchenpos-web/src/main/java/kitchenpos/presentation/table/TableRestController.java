@@ -1,12 +1,17 @@
-package main.java.kitchenpos.presentation.table;
+package kitchenpos.presentation.table;
 
-import kitchenpos.table.application.TableService;
-import kitchenpos.table.domain.OrderTable;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
-import main.java.kitchenpos.presentation.table.dto.CreateOrderTableRequest;
+import kitchenpos.application.table.TableService;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
+import kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
+import kitchenpos.presentation.table.dto.CreateOrderTableRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 import java.util.List;

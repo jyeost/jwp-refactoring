@@ -1,24 +1,22 @@
-package main.java.kitchenpos.application.menu;
+package kitchenpos.application.menu;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menu.MenuProductRepository;
-import kitchenpos.menu.MenuRepository;
-import kitchenpos.menu.domain.Menu;
-import kitchenpos.menu.domain.MenuProduct;
-import kitchenpos.menu.domain.MenuProducts;
-import main.java.kitchenpos.presentation.menu.dto.MenuRequest;
-import kitchenpos.menugroup.MenuGroupRepository;
-import kitchenpos.menugroup.domain.MenuGroup;
-import kitchenpos.product.ProductRepository;
-import kitchenpos.product.domain.Product;
+import kitchenpos.domain.menu.Menu;
+import kitchenpos.domain.menu.MenuProduct;
+import kitchenpos.domain.menu.MenuProductRepository;
+import kitchenpos.domain.menu.MenuProducts;
+import kitchenpos.domain.menu.MenuRepository;
+import kitchenpos.domain.menugroup.MenuGroup;
+import kitchenpos.domain.menugroup.MenuGroupRepository;
+import kitchenpos.domain.product.Product;
+import kitchenpos.domain.product.ProductRepository;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.menu.dto.MenuRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static kitchenpos.global.exception.ExceptionInformation.MENU_GROUP_NOT_FOUND;
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_NOT_FOUND;
 
 @Service
 public class MenuService {

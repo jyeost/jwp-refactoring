@@ -1,20 +1,21 @@
 package kitchenpos.application;
 
-import kitchenpos.menu.application.MenuService;
-import kitchenpos.menu.domain.Menu;
-import kitchenpos.menugroup.domain.MenuGroup;
-import kitchenpos.order.application.OrderService;
-import kitchenpos.product.domain.Product;
-import kitchenpos.product.application.ProductService;
-import kitchenpos.table.domain.OrderTable;
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menugroup.application.MenuGroupService;
+
+import kitchenpos.application.menu.MenuService;
+import kitchenpos.application.menugroup.MenuGroupService;
+import kitchenpos.application.order.OrderService;
+import kitchenpos.application.product.ProductService;
+import kitchenpos.application.table.TableService;
+import kitchenpos.application.tablegroup.TableGroupService;
+import kitchenpos.domain.menu.Menu;
+import kitchenpos.domain.menugroup.MenuGroup;
+import kitchenpos.domain.product.Product;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
+import kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
+import kitchenpos.presentation.table.dto.CreateOrderTableRequest;
 import kitchenpos.support.ServiceTest;
-import kitchenpos.table.application.TableService;
-import kitchenpos.tablegroup.application.TableGroupService;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
-import main.java.kitchenpos.presentation.table.dto.CreateOrderTableRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -22,8 +23,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-import static kitchenpos.global.exception.ExceptionInformation.*;
-import static kitchenpos.support.TestFixture.*;
+import static kitchenpos.exception.ExceptionInformation.EMPTY_TABLE_UPDATE_GUEST;
+import static kitchenpos.exception.ExceptionInformation.ORDER_TABLE_GUEST_OUT_OF_BOUNCE;
+import static kitchenpos.exception.ExceptionInformation.ORDER_TABLE_IS_GROUPING;
+import static kitchenpos.exception.ExceptionInformation.ORDER_TABLE_NOT_FOUND;
+import static kitchenpos.exception.ExceptionInformation.ORDER_TABLE_STATUS_IS_NOT_COMPLETE;
+import static kitchenpos.support.TestFixture.그룹화_테이블;
+import static kitchenpos.support.TestFixture.메뉴;
+import static kitchenpos.support.TestFixture.메뉴_분류;
+import static kitchenpos.support.TestFixture.상품;
+import static kitchenpos.support.TestFixture.주문;
+import static kitchenpos.support.TestFixture.주문_테이블;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;

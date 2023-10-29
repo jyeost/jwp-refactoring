@@ -1,11 +1,16 @@
-package main.java.kitchenpos.domain.table;
+package kitchenpos.domain.table;
 
-import kitchenpos.global.exception.KitchenposException;
 
-import javax.persistence.*;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
-import static kitchenpos.global.exception.ExceptionInformation.EMPTY_TABLE_UPDATE_GUEST;
 
 @Entity
 public class OrderTable {

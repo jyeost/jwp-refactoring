@@ -1,15 +1,20 @@
-package main.java.kitchenpos.domain.order;
+package kitchenpos.domain.order;
 
-import kitchenpos.table.domain.OrderTable;
-import kitchenpos.global.exception.KitchenposException;
 
-import javax.persistence.*;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
-
-import static kitchenpos.global.exception.ExceptionInformation.ORDER_IN_EMPTY_TABLE;
-import static kitchenpos.global.exception.ExceptionInformation.UPDATE_COMPLETED_ORDER;
 
 @Table(name = "orders")
 @Entity

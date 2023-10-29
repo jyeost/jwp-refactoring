@@ -1,18 +1,19 @@
-package main.java.kitchenpos.application.order;
+package kitchenpos.application.order;
 
-import kitchenpos.menu.domain.Menu;
-import kitchenpos.order.domain.Order;
-import kitchenpos.order.domain.OrderLineItem;
-import kitchenpos.order.domain.OrderStatus;
-import kitchenpos.table.domain.OrderTable;
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menu.MenuRepository;
-import kitchenpos.order.OrderLineItemRepository;
-import kitchenpos.order.OrderRepository;
-import kitchenpos.table.OrderTableRepository;
-import main.java.kitchenpos.presentation.order.dto.OrderLineItemRequest;
-import main.java.kitchenpos.presentation.order.dto.OrderRequest;
-import main.java.kitchenpos.presentation.order.dto.UpdateOrderStateRequest;
+import kitchenpos.domain.menu.Menu;
+import kitchenpos.domain.menu.MenuRepository;
+import kitchenpos.domain.order.Order;
+import kitchenpos.domain.order.OrderLineItem;
+import kitchenpos.domain.order.OrderLineItemRepository;
+import kitchenpos.domain.order.OrderRepository;
+import kitchenpos.domain.order.OrderStatus;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.domain.table.OrderTableRepository;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.order.dto.OrderLineItemRequest;
+import kitchenpos.presentation.order.dto.OrderRequest;
+import kitchenpos.presentation.order.dto.UpdateOrderStateRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -22,7 +23,6 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static kitchenpos.global.exception.ExceptionInformation.*;
 
 @Service
 public class OrderService {

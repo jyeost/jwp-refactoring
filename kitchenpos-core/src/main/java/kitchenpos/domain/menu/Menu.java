@@ -1,13 +1,16 @@
-package main.java.kitchenpos.domain.menu;
+package kitchenpos.domain.menu;
 
-import kitchenpos.global.exception.KitchenposException;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
 
-import javax.persistence.*;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-import static kitchenpos.global.exception.ExceptionInformation.MENU_PRICE_IS_NULL;
-import static kitchenpos.global.exception.ExceptionInformation.MENU_PRICE_OVER_MENU_PRODUCT_PRICE;
 
 @Entity
 public class Menu {

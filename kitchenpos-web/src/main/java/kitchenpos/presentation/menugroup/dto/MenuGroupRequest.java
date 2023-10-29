@@ -1,4 +1,4 @@
-package main.java.kitchenpos.presentation.menugroup.dto;
+package kitchenpos.presentation.menugroup.dto;
 
 public class MenuGroupRequest {
 

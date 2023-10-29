@@ -1,18 +1,16 @@
-package main.java.kitchenpos.application.table;
+package kitchenpos.application.table;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.table.OrderTableRepository;
-import kitchenpos.table.domain.OrderTable;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
-import main.java.kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
-import main.java.kitchenpos.presentation.table.dto.CreateOrderTableRequest;
+import kitchenpos.domain.table.OrderTable;
+import kitchenpos.domain.table.OrderTableRepository;
+import kitchenpos.exception.ExceptionInformation;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.table.dto.ChangeOrderTableEmptyRequest;
+import kitchenpos.presentation.table.dto.ChangeOrderTableGuestRequest;
+import kitchenpos.presentation.table.dto.CreateOrderTableRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
-import static kitchenpos.global.exception.ExceptionInformation.ORDER_TABLE_IS_GROUPING;
-import static kitchenpos.global.exception.ExceptionInformation.ORDER_TABLE_NOT_FOUND;
 
 @Service
 public class TableService {

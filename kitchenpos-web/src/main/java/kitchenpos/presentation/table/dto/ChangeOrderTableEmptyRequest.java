@@ -1,4 +1,4 @@
-package main.java.kitchenpos.presentation.table.dto;
+package kitchenpos.presentation.table.dto;
 
 public class ChangeOrderTableEmptyRequest {
 

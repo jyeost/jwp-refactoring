@@ -1,8 +1,6 @@
 package kitchenpos.domain.menu;
 
-
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menu.domain.Price;
+import kitchenpos.exception.KitchenposException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -10,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static kitchenpos.global.exception.ExceptionInformation.MENU_PRICE_LENGTH_OUT_OF_BOUNCE;
+import static kitchenpos.exception.ExceptionInformation.MENU_PRICE_LENGTH_OUT_OF_BOUNCE;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @SuppressWarnings("NonAsciiCharacters")

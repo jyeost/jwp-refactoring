@@ -1,15 +1,14 @@
 package kitchenpos.domain.product;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.product.domain.Name;
+import kitchenpos.exception.KitchenposException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_NAME_IS_NULL;
-import static kitchenpos.global.exception.ExceptionInformation.PRODUCT_NAME_LENGTH_OUT_OF_BOUNCE;
+import static kitchenpos.exception.ExceptionInformation.PRODUCT_NAME_IS_NULL;
+import static kitchenpos.exception.ExceptionInformation.PRODUCT_NAME_LENGTH_OUT_OF_BOUNCE;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.DisplayNameGenerator.ReplaceUnderscores;

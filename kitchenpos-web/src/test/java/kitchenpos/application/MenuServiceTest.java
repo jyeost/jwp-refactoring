@@ -1,14 +1,14 @@
 package kitchenpos.application;
 
-import kitchenpos.global.exception.KitchenposException;
-import kitchenpos.menu.application.MenuService;
-import kitchenpos.menu.domain.Menu;
-import main.java.kitchenpos.presentation.menu.dto.MenuProductRequest;
-import main.java.kitchenpos.presentation.menu.dto.MenuRequest;
-import kitchenpos.menugroup.application.MenuGroupService;
-import kitchenpos.menugroup.domain.MenuGroup;
-import kitchenpos.product.application.ProductService;
-import kitchenpos.product.domain.Product;
+import kitchenpos.application.menu.MenuService;
+import kitchenpos.application.menugroup.MenuGroupService;
+import kitchenpos.application.product.ProductService;
+import kitchenpos.domain.menu.Menu;
+import kitchenpos.domain.menugroup.MenuGroup;
+import kitchenpos.domain.product.Product;
+import kitchenpos.exception.KitchenposException;
+import kitchenpos.presentation.menu.dto.MenuProductRequest;
+import kitchenpos.presentation.menu.dto.MenuRequest;
 import kitchenpos.support.ServiceTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -19,8 +19,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static kitchenpos.global.exception.ExceptionInformation.*;
-import static kitchenpos.support.TestFixture.*;
+import static kitchenpos.exception.ExceptionInformation.MENU_GROUP_NOT_FOUND;
+import static kitchenpos.exception.ExceptionInformation.MENU_PRICE_IS_NULL;
+import static kitchenpos.exception.ExceptionInformation.MENU_PRICE_LENGTH_OUT_OF_BOUNCE;
+import static kitchenpos.exception.ExceptionInformation.MENU_PRICE_OVER_MENU_PRODUCT_PRICE;
+import static kitchenpos.exception.ExceptionInformation.PRODUCT_NOT_FOUND;
+import static kitchenpos.support.TestFixture.메뉴;
+import static kitchenpos.support.TestFixture.메뉴_분류;
+import static kitchenpos.support.TestFixture.상품;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 

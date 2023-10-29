@@ -1,6 +1,5 @@
-package main.java.kitchenpos.domain.menugroup;
+package kitchenpos.domain.menugroup;
 
-import kitchenpos.menugroup.domain.MenuGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
